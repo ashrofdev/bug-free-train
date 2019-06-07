@@ -1,0 +1,58 @@
+body {
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+  background-image: url(gal-3.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  position: absolute;
+  top: 15vh;
+  left: 20vw;
+  box-shadow: 1rem 1rem 3rem black;
+  opacity: 0;
+  transform: translateX(100rem);
+  transition: all 1s;
+}
+
+.active {
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 100;
+}
+
+.go {
+  opacity: 0;
+}
+
+img {
+  width: 60vw;
+  height: 70vh;
+  overflow: hidden;
+  box-shadow: 1rem 1rem 3rem black;
+  margin: auto auto;
+}
+
+@media screen and (max-width: 800px) {
+  .card {
+    position: absolute;
+    top: 10vh;
+    left: 5vw;
+  }
+
+  img {
+    height: 70vh;
+    width: 90vw;
+  }
+}
